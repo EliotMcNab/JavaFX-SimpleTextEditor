@@ -1,0 +1,29 @@
+/*TEXT*/
+
+.root * {
+    -fx-text-fill: #D7D7D7;
+}
+
+.label {
+    -fx-fill: -fx-text-fill;
+}
+
+.editor {
+    -fx-text-fill: #1A2024;
+}
+
+/*EDITOR BACKGROUND*/
+
+.background {
+    -fx-background-color: #21252B;
+}
+
+/*BUTTON*/
+
+.button {
+    -fx-background-color: #3B4347;
+}
+
+.button:hover {
+    -fx-background-color: #616B6F;
+}
