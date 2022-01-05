@@ -48,6 +48,6 @@ Right now the editor is pretty bare-bones. I hope to change that.
 
 ### CONTACT ME
 
-email: [eliotmcnab.private@gmail.com]()
+email: [eliotmcnab.private@gmail.com](mailto:eliotmcnab.private@gmail.com)
 
 
