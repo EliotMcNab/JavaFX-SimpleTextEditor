@@ -10,7 +10,7 @@
 
 
 
-###ABOUT THE PROJECT
+### ABOUT THE PROJECT
 <i>Hello, and welcome to my attempt to learn JavaFx.</i>
 
 The goal of this project is for me to 
@@ -20,7 +20,7 @@ a starting point for other, more advanced projects.
 
 ****
 
-###FEATURES
+### FEATURES
 
 Right now the editor is pretty bare-bones. I hope to change that.
 
@@ -46,7 +46,7 @@ Right now the editor is pretty bare-bones. I hope to change that.
 
 ****
 
-###CONTACT ME
+### CONTACT ME
 
 email: [eliotmcnab.private@gmail.com]()
 
