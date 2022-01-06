@@ -2,9 +2,10 @@ package com.example.learnfx.io.files;
 
 public enum Directories {
 
+
     EXPORT("src/export/"),
     IMAGES("src/export/images/"),
-    TEXT_FILES("src/export/text/");
+    ICONS("src/main/resources/com/learnfx/icons/");
 
     private final String path;
 

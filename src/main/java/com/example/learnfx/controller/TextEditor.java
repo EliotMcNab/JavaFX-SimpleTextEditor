@@ -1,5 +1,6 @@
 package com.example.learnfx.controller;
 
+import com.example.learnfx.io.files.FileType;
 import com.example.learnfx.io.files.read.FileReader;
 import com.example.learnfx.io.files.write.FileWriter;
 import javafx.scene.control.TextArea;
@@ -7,8 +8,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-
-import static com.example.learnfx.io.files.FileType.*;
 
 public class TextEditor {
 
@@ -35,10 +34,10 @@ public class TextEditor {
      * @param textArea (TextArea): the textArea being affected
      */
     public void saveText(TextArea textArea, String path) {
-        fileChooser.setTitle("Save");
+        fileChooser.setTitle("Save File");
 
         // the types of files which can be saved to by the user
-        FileChooser.ExtensionFilter anyFilter = new FileChooser.ExtensionFilter("ALL FILES (*.)", "*");
+        FileChooser.ExtensionFilter anyFilter = new FileChooser.ExtensionFilter("ALL FILES (*)", "*");
         FileChooser.ExtensionFilter txtFilter = new FileChooser.ExtensionFilter("TXT (*.txt)", "*.txt");
         fileChooser.getExtensionFilters().addAll(txtFilter, anyFilter);
         // by default, text files are saved
@@ -55,8 +54,8 @@ public class TextEditor {
 
         // saves the file under the selected format
         switch (fileFormat) {
-            case "*.txt" -> FileWriter.writeText(fileToSave, textArea.getText(), TXT);
-            default -> FileWriter.writeText(fileToSave, textArea.getText(), ALL_FILE_TYPE);
+            case "*.txt" -> FileWriter.writeText(fileToSave, textArea.getText(), FileType.TXT);
+            default -> FileWriter.writeText(fileToSave, textArea.getText(), FileType.ALL_FILE_TYPE);
         }
     }
 
@@ -65,10 +64,15 @@ public class TextEditor {
      * @param textArea (TextArea): the textArea being affected
      */
     public void loadText(TextArea textArea) {
-        fileChooser.setTitle("Load");
+        fileChooser.setTitle("Load File");
 
-        // only text files can be loaded
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("TXT", "*.txt"));
+        // the types of files which can be loaded
+        FileChooser.ExtensionFilter anyFilter = new FileChooser.ExtensionFilter("ALL FILES (*)", "*");
+        FileChooser.ExtensionFilter txtFilter = new FileChooser.ExtensionFilter("TXT (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().addAll(anyFilter, txtFilter);
+        // by default, only text file can be opened
+        fileChooser.setSelectedExtensionFilter(txtFilter);
+
         // the file which the user has loaded
         File fileToLoad = fileChooser.showOpenDialog(new Stage());
 

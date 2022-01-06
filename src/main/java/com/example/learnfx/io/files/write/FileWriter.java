@@ -1,7 +1,6 @@
 package com.example.learnfx.io.files.write;
 
 import com.example.learnfx.io.files.FileType;
-import com.example.learnfx.io.files.read.FileReader;
 
 import java.io.*;
 
